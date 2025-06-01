@@ -95,10 +95,12 @@ const saveAndValidate = () => {
   };
 
   if (currentEditingKey) {
+    //for editing the task and saving it to localstorage
     localStorage.setItem(currentEditingKey, JSON.stringify(data));
     showSuccessfulMsg("Task saved successfully");
     currentEditingKey = null;
   } else {
+    //to add the task to the localstorage
     localStorage.setItem(key, JSON.stringify(data));
     showSuccessfulMsg("Task added successfully");
   }
