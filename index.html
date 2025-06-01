@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>DailyDrip</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="left-content">
+        <div class="quote-box">Perfect is better than done.</div>
+        <div class="black-cover"></div>
+        <img src="./images/background1.jpg" alt="" />
+      </div>
+      <div class="right-content">
+        <div class="top-bar">
+          <div class="heading">
+            <i class="ri-edit-circle-fill"></i>
+            <h1>Daily<span>Drip</span></h1>
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search task" />
+            <button><i class="ri-add-line">Add Task</i></button>
+          </div>
+        </div>
+
+        <div class="table-content">
+          <table>
+            <tr>
+              <th>SN</th>
+              <th>Task</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+            <!-- data will be fetch here -->
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- pop up dialog box -->
+    <div class="pop-up">
+      <div class="input-container">
+        <div class="top">
+          <h3>Add</h3>
+          <i class="ri-close-circle-line"></i>
+        </div>
+        <div class="fields">
+          <input id="add-task" type="text" placeholder="Enter Task" />
+          <div class="error-message1"></div>
+          <input id="add-date" type="date" />
+          <div class="error-message2"></div>
+        </div>
+        <div class="save-btn">
+          <button onclick="saveAndValidate()">
+            <i class="ri-save-fill"></i>Save
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- successful box -->
+    <div class="successful-container">
+      <div class="message">
+        <div class="success-heading"></div>
+        <button onclick="hideSuccessBox()">OK</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,520 @@
+/* inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "inter", sans-serif;
+}
+
+.content {
+  position: relative;
+  height: 100vh;
+}
+
+.black-cover {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.quote-box {
+  position: fixed;
+  top: 25%;
+  left: 5%;
+  z-index: 10;
+  font-size: 4rem;
+  color: rgb(197, 200, 203);
+  font-weight: 900;
+  width: 40%;
+  height: 50%;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.right-content {
+  margin-left: 50%;
+  top: 0;
+  padding: 1rem;
+}
+
+.right-content .top-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar .heading {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.heading i {
+  color: blueviolet;
+  font-size: 3.9rem;
+  font-weight: 900;
+}
+
+.heading h1 {
+  font-size: 3.7rem;
+  font-weight: 800;
+  color: rgb(9, 94, 27);
+}
+
+.heading span {
+  color: blueviolet;
+}
+
+.top-bar .search-box {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-box input {
+  width: 60%;
+  padding: 0.55rem;
+  outline: none;
+  font-size: 0.9rem;
+  color: rgb(20, 20, 20);
+  border: 1px solid black;
+  border-radius: 0.3rem;
+}
+
+.search-box button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3rem;
+  color: rgb(229, 232, 235);
+  background: rgb(9, 94, 27);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: blueviolet;
+}
+
+.table-content {
+  margin-top: 1.5rem;
+}
+
+.table-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-content th {
+  background: rgb(215, 212, 212);
+  padding: 0.4rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.table-content td {
+  padding: 0.4rem;
+  border-bottom: 1px solid rgb(189, 186, 186);
+  font-size: 0.85rem;
+}
+
+.table-content select {
+  outline: none;
+  padding: 0.3rem 0.2rem;
+  border: 1px solid rgb(189, 186, 186);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table-content button {
+  border-radius: 50%;
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.table-content i {
+  color: rgb(221, 226, 230);
+}
+
+.table-content .edit-btn {
+  background: rgb(9, 94, 27);
+}
+.table-content .edit-btn:hover {
+  background: rgb(8, 130, 35);
+}
+
+.table-content .delete-btn {
+  background: blueviolet;
+}
+.table-content .delete-btn:hover {
+  background: rgb(154, 66, 236);
+}
+
+/* pop-up add and delete task */
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.pop-up .input-container {
+  width: 35%;
+  height: auto;
+  background: rgb(206, 209, 211);
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+
+.input-container .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: rgb(29, 28, 28);
+}
+
+.top i {
+  font-size: 1.6rem;
+  font-weight: 900;
+  cursor: pointer;
+  color: rgb(29, 28, 28);
+  transition: 0.5s ease;
+}
+
+.top i:hover {
+  color: rgb(162, 6, 6);
+}
+
+.input-container .fields {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fields input {
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+  border-radius: 0.35rem;
+  width: 90%;
+  background-color: rgb(203, 206, 208);
+  border: 1px solid gray;
+  margin-top: 1rem;
+}
+
+.input-container .save-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.save-btn i {
+  margin-right: 0.1rem;
+}
+
+.save-btn button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgb(118, 35, 196);
+  color: rgb(194, 197, 197);
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.save-btn button:hover {
+  background-color: rgb(9, 94, 27);
+}
+
+/* successful box */
+.successful-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.successful-container .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 28%;
+  height: 30%;
+  background: rgb(206, 209, 211);
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+.success-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(43, 41, 41);
+}
+
+.message button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: blueviolet;
+  color: rgb(201, 204, 206);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.message button:hover {
+  background-color: rgb(9, 94, 27);
+}
+
+/* responsive layout */
+/* less than 1230px */
+
+@media (max-width: 1100px) {
+  .left-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .left-content img {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .black-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+  }
+
+  .quote-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-size: 2.7rem;
+  }
+
+  .right-content {
+    position: relative;
+    margin-left: 0;
+    top: 150px;
+    padding: 10px 30px;
+  }
+
+  .search-box input {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .pop-up .input-container {
+    width: 50%;
+  }
+
+  .fields input {
+    margin-top: 1.2rem;
+  }
+
+  .save-btn {
+    margin: 1rem;
+  }
+
+  .table-content th {
+    font-size: 1.2rem;
+  }
+
+  .table-content td {
+    font-size: 0.9rem;
+  }
+
+  .successful-container .message {
+    width: 45%;
+    height: 25%;
+  }
+
+  .success-heading {
+    font-size: 1.8rem;
+  }
+
+  .message button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  .left-content img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .black-cover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .quote-box {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgb(204, 208, 212);
+  }
+
+  .right-content {
+    top: 0;
+    padding: 5px 10px;
+  }
+
+  .heading i {
+    font-size: 2.5rem;
+  }
+
+  .heading h1 {
+    font-size: 2.3rem;
+  }
+
+  .top-bar .search-box {
+    width: 95%;
+    margin-top: 1.7rem;
+  }
+
+  .search-box input {
+    font-size: 13px;
+    padding: 7px 12px;
+    width: 65%;
+  }
+
+  .search-box button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .table-content {
+    margin-top: 1rem;
+  }
+
+  .table-content th {
+    padding: 0.2rem;
+    font-size: 0.75rem;
+  }
+
+  .table-content td {
+    padding: 0.2rem;
+    font-size: 0.65rem;
+  }
+
+  .table-content select {
+    font-size: 0.65rem;
+    padding: 0.2rem;
+  }
+
+  .table-content button {
+    border-radius: 50%;
+    padding: 0.2rem;
+  }
+
+  .table-content i {
+    font-size: 0.85rem;
+  }
+
+  .pop-up .input-container {
+    width: 80%;
+  }
+  .top h3 {
+    font-size: 1rem;
+  }
+  .top i {
+    font-size: 1.3rem;
+  }
+
+  .input-container .fields {
+    margin-top: 0.1rem;
+  }
+  .fields input {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    margin-top: 1.3rem;
+  }
+  .save-btn button {
+    font-size: 0.85rem;
+  }
+
+  .successful-container .message {
+    padding: 0.8rem 0;
+    width: 80%;
+    height: 150px;
+    gap: 2rem;
+  }
+
+  .success-heading {
+    font-size: 1.3rem;
+  }
+
+  .message button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
