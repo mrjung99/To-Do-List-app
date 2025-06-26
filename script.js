@@ -139,7 +139,7 @@ const hideSuccessBox = () => {
 };
 
 //===============================================================================
-//*this will fetch data to the table from localstorage
+//this will fetch data to the table from localstorage
 const fetchTaskOnTable = () => {
   const tbody = document.querySelector(".tbody");
   const keys = Object.keys(localStorage);
@@ -186,6 +186,7 @@ const fetchTaskOnTable = () => {
     tbody.innerHTML += tbodyRow;
   }
 };
+
 
 //detelet task
 const deleteTask = (key) => {
