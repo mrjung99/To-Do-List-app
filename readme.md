@@ -25,6 +25,6 @@ Create, manage, and complete your daily tasks — with a new motivational quote 
 - HTML5
 - CSS3
 - JavaScript (Vanilla JS)
-- LocalStorage API
+- LocalStorage
 
 ---
