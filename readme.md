@@ -16,7 +16,7 @@ Create, manage, and complete your daily tasks — with a new motivational quote 
 
 ## 📸 Screenshot
 
-![Screenshot](<./images/Screenshot%20(6).png>) <!-- Optional: Add a screenshot of your app -->
+![Screenshot](<./images/Screenshot (19).png>) <!-- Optional: Add a screenshot of your app -->
 
 ---
 
